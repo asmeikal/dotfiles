@@ -1,0 +1,137 @@
+" Vundle {{{
+" Required for Vundle
+set nocompatible
+filetype off
+
+" Set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+" Let Vundle manage Vundle
+Plugin 'VundleVim/Vundle.vim'
+
+" Plugins {{{
+Plugin 'sickill/vim-monokai'
+" }}}
+
+" Required for Vundle
+call vundle#end()
+filetype plugin indent on
+" }}}
+
+" Basics {{{
+" Turn off compatibility to vi
+set nocompatible
+
+" Enable auto-indenting and filetype-specific plugins
+filetype indent plugin on
+" }}}
+
+" Colours {{{
+" Enable syntax highlighting
+syntax on
+
+" Use custom color scheme
+colorscheme monokai
+" }}}
+
+" Editing {{{
+" Allow buffer switching without saving
+set hidden
+
+" Backspace works like you expect it
+set backspace=indent,eol,start
+
+" Prevent Vim from automatically inserting line breaks when typing
+set textwidth=0
+set wrapmargin=0
+" }}}
+
+" Layout {{{
+" Display line numbers
+set number
+
+" Highlight matching parenthesis
+set showmatch
+
+" Show where the cursor is
+set ruler
+
+" Highlight the current line
+set cursorline
+
+" Always display the status line
+set laststatus=2
+
+" Use visual bell instead of beeping when doing something wrong
+set visualbell
+
+" Reset the terminal code for the visual bell
+set t_vb=
+
+" Set the command window height to 2 lines
+set cmdheight=2
+
+" Show command being typed
+set showcmd
+
+" Better command-line completion
+set wildmenu
+" }}}
+
+" Mappings {{{
+" Handier way to switch to Normal Mode
+inoremap jj <Esc>
+
+" Insert a semicolon at the end of the current line
+inoremap <Leader>; <Esc>A;<Esc>
+
+" Insert a curly bracket at the end of the current line
+inoremap <Leader>[ <Esc>A {<CR>}<Esc>O<Tab>
+
+" Turn off search highlighting until the next search
+nnoremap <Leader>l :nohls<CR>
+" }}}
+
+" Searches {{{
+" Highlight searches
+set hlsearch
+
+" Search as characters are entered
+set incsearch
+
+" Use case insensitive search
+set ignorecase
+
+" If the search pattern contains uppercase characters, use case sensitive search
+set smartcase 
+" }}}
+
+" Spaces & Tabs {{{
+" When no filetype-specific is enabled, opening a line keeps the same indent level
+set autoindent
+
+" How many columns Vim uses for displaying a <Tab>
+set tabstop=4
+
+" How many columns Vim uses when <Tab> is pressed in Insert Mode
+set softtabstop=4
+
+" How many columns text is indented with reindent operations
+set shiftwidth=4
+
+" Tabs are not converted to spaces
+set noexpandtab
+" }}}
+
+" Splits {{{
+" Easier split navigation mappings
+nnoremap <C-H> <C-W>h
+nnoremap <C-J> <C-W>j
+nnoremap <C-K> <C-W>k
+nnoremap <C-L> <C-W>l
+
+" More natural split opening
+set splitbelow
+set splitright
+" }}}

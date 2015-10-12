@@ -1,0 +1,5 @@
+alias ls="ls -1 --color=auto"
+alias lla="ls -la"
+alias openpdf="evince"
+alias openimg="ristretto"
+
