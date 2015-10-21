@@ -3,3 +3,7 @@ alias lla="ls -la"
 alias openpdf="evince"
 alias openimg="ristretto"
 
+# Shortcuts
+MODELICA="$HOME/Developer/Modelica/progetto-OS2"
+ANALISI="$HOME/Developer/LaTeX/uni/III-anno/I-semestre/analisi-2"
+
