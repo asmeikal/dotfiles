@@ -30,6 +30,7 @@ bindsym $mod+Return exec i3-sensible-terminal
 bindsym $mod+m exec icedove
 bindsym $mod+b exec iceweasel
 bindsym $mod+c exec pidgin
+bindsym $mod+t exec thunar
 
 # kill focused window
 bindsym $mod+Shift+q kill
