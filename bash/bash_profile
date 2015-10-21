@@ -21,4 +21,4 @@ if [ -d "$HOME/bin" ] ; then
     PATH="$HOME/bin:$PATH"
 fi
 
-PATH="/opt/ibm/ILOG/CPLEX_Studio_Community1262/cplex/bin/x86_linux:/usr/local/go/bin:$HOME/bin/arduino-nightly:$PATH"
+PATH="/opt/ibm/ILOG/CPLEX_Studio_Community1262/cplex/bin/x86-64_linux:/usr/local/go/bin:$HOME/bin/arduino-nightly:$PATH"
