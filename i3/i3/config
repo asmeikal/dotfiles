@@ -43,7 +43,7 @@ bindsym $mod+Shift+q kill
 bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 
 # change focus
-bindsym $mod+semicolon focus left
+bindsym $mod+h focus left
 bindsym $mod+j focus down 
 bindsym $mod+k focus up
 bindsym $mod+l focus right
@@ -55,7 +55,7 @@ bindsym $mod+Up focus up
 bindsym $mod+Right focus right
 
 # move focused window
-bindsym $mod+Shift+semicolon move left
+bindsym $mod+Shift+h move left
 bindsym $mod+Shift+j move down
 bindsym $mod+Shift+k move up
 bindsym $mod+Shift+l move right
@@ -67,7 +67,7 @@ bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
 # split in horizontal orientation
-bindsym $mod+h split h
+bindsym $mod+o split h
 
 # split in vertical orientation
 bindsym $mod+v split v
@@ -164,10 +164,12 @@ bindsym $mod+r mode "resize"
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
+        position top
         status_command i3status 
 }
 
 
+exec --no-startup-id nm-applet
 exec --no-startup-id xsetroot -solid "#333332"
 exec --no-startup-id xautolock -time 5 -locker 'i3lock -c 000000' &
 
