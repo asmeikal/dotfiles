@@ -11,7 +11,12 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 
 " Plugins {{{
+
 Plugin 'sickill/vim-monokai'
+
+Bundle 'ntpeters/vim-better-whitespace'
+" let g:better_whitespace_filetypes_blacklist=['tex']
+
 " }}}
 
 " Required for Vundle
@@ -22,6 +27,9 @@ filetype plugin indent on
 " Basics {{{
 " Turn off compatibility to vi
 set nocompatible
+
+" My tex flavor is LaTeX :-)
+let g:tex_flavor = "tex"
 
 " Enable auto-indenting and filetype-specific plugins
 filetype indent plugin on
@@ -42,9 +50,6 @@ set hidden
 " Backspace works like you expect it
 set backspace=indent,eol,start
 
-" Prevent Vim from automatically inserting line breaks when typing
-set textwidth=0
-set wrapmargin=0
 " }}}
 
 " Layout {{{
@@ -87,7 +92,7 @@ inoremap jj <Esc>
 inoremap <Leader>; <Esc>A;<Esc>
 
 " Insert a curly bracket at the end of the current line
-inoremap <Leader>[ <Esc>A {<CR>}<Esc>O<Tab>
+"inoremap <Leader>[ <Esc>A {<CR>}<Esc>O<Tab>
 
 " Turn off search highlighting until the next search
 nnoremap <Leader>l :nohls<CR>
@@ -104,7 +109,7 @@ set incsearch
 set ignorecase
 
 " If the search pattern contains uppercase characters, use case sensitive search
-set smartcase 
+set smartcase
 " }}}
 
 " Spaces & Tabs {{{
