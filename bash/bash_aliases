@@ -5,5 +5,11 @@ alias openimg="ristretto"
 
 # Shortcuts
 MODELICA="$HOME/Developer/Modelica/progetto-OS2"
-ANALISI="$HOME/Developer/LaTeX/uni/III-anno/I-semestre/analisi-2"
+# LaTeX
+LATEX="$HOME/Developer/LaTeX/uni"
+ALGEBRA="$LATEX/II-anno/I-semestre/algebra"
+INTEGRALE="$LATEX/I-anno/II-semestre/calcolo-integrale"
+ANALISI="$LATEX/III-anno/I-semestre/analisi-2"
+COMBINATORIA="$LATEX/III-anno/I-semestre/combinatoria"
+AUTOMI="$LATEX/III-anno/I-semestre/automi"
 
