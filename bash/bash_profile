@@ -35,3 +35,18 @@ if [ -d $ARDUINO ] ; then
 	PATH="$ARDUINO:$PATH"
 fi
 
+# Personal scripts
+BASH_SCRIPTS="$HOME/Developer/Bash"
+
+if [ -d $BASH_SCRIPTS ] ; then
+	PATH="$PATH:$BASH_SCRIPTS"
+fi
+
+# Visual paradigm
+VISUALPARADIGM="$HOME/bin/VisualParadigm"
+
+if [ -d $VISUALPARADIGM ] ; then
+	PATH="$VISUALPARADIGM:$PATH"
+fi
+
+

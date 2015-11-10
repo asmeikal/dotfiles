@@ -6,6 +6,7 @@ alias openimg="ristretto"
 # Shortcuts
 MODELICA="$HOME/Developer/Modelica/progetto-OS2"
 # LaTeX
+LATEX_COMMON="$HOME/Developer/LaTeX/common"
 LATEX="$HOME/Developer/LaTeX/uni"
 ALGEBRA="$LATEX/II-anno/I-semestre/algebra"
 INTEGRALE="$LATEX/I-anno/II-semestre/calcolo-integrale"
