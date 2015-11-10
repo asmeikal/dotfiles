@@ -1,0 +1,15 @@
+{
+	"font_face": "DejaVu Sans Mono",
+	"font_size": 10,
+	"ignored_packages":
+	[
+		"Makefile",
+		"Vintage"
+	],
+	"rulers":
+	[
+		78
+	],
+	"word_wrap": true,
+	"wrap_width": 78
+}

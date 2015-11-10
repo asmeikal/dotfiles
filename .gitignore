@@ -1,2 +1,8 @@
 vim/vim/bundle
 
+# Sublime Text 3 settings
+sublime-text-3/**/*
+!sublime-text-3/Snippets/
+!sublime-text-3/**/*.sublime-settings
+!sublime-text-3/**/*.sublime-snippet
+
