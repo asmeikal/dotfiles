@@ -33,7 +33,7 @@ bindsym $mod+c exec pidgin
 bindsym $mod+t exec thunar
 
 # kill focused window
-bindsym $mod+Shift+q kill
+bindsym $mod+q kill
 
 # start dmenu (a program launcher)
 #bindsym $mod+d exec dmenu_run
