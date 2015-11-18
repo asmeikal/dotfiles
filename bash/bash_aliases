@@ -1,16 +1,50 @@
-alias ls="ls -1 --color=auto"
-alias lla="ls -la"
-alias openpdf="evince"
-alias openimg="ristretto"
+if [ ! -e ~/.bash_functions ] ; then
+	echo "~/.bash_functions missing."
+	return 1
+else
+	. ~/.bash_functions
+fi
+
+UNAME=`uname`
+if [ "$UNAME" = "Darwin" ] ; then
+	# OS X
+	alias ls="ls -1G"
+else
+	# Linux
+	alias ls="ls -1 --color=auto"
+fi
+unset UNAME
+
+# As seen on http://natelandau.com/my-mac-osx-bash_profile/
+alias cp="cp -iv"
+alias mv="mv -iv"
+alias mkdir="mkdir -pv"
+alias ll="ls -FGhlp"
+alias lla="ls -AFGhlp"
+
+set_cmd_var openpdf evince
+set_cmd_var openimg ristretto
 
 # Shortcuts
 MODELICA="$HOME/Developer/Modelica/progetto-OS2"
+set_dir_var MODELICA
+
 # LaTeX
-LATEX_COMMON="$HOME/Developer/LaTeX/common"
-LATEX="$HOME/Developer/LaTeX/uni"
-ALGEBRA="$LATEX/II-anno/I-semestre/algebra"
-INTEGRALE="$LATEX/I-anno/II-semestre/calcolo-integrale"
-ANALISI="$LATEX/III-anno/I-semestre/analisi-2"
-COMBINATORIA="$LATEX/III-anno/I-semestre/combinatoria"
-AUTOMI="$LATEX/III-anno/I-semestre/automi"
+LATEX="$HOME/Developer/LaTeX"
+if set_dir_var LATEX ; then
+	ALGEBRA="$LATEX/uni/II-anno/I-semestre/algebra"
+	set_dir_var ALGEBRA
+	INTEGRALE="$LATEX/uni/I-anno/II-semestre/calcolo-integrale"
+	set_dir_var INTEGRALE
+	ANALISI="$LATEX/uni/III-anno/I-semestre/analisi-2"
+	set_dir_var ANALISI
+	COMBINATORIA="$LATEX/uni/III-anno/I-semestre/combinatoria"
+	set_dir_var COMBINATORIA
+	AUTOMI="$LATEX/uni/III-anno/I-semestre/automi"
+	set_dir_var AUTOMI
+fi
+
+# SoftEng
+SOFTENG="$HOME/Documents/SoftEng"
+set_dir_var SOFTENG
 

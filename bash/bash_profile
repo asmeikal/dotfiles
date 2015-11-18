@@ -16,37 +16,4 @@ if [ -n "$BASH_VERSION" ]; then
     fi
 fi
 
-# set PATH so it includes user's private bin if it exists
-if [ -d "$HOME/bin" ] ; then
-    PATH="$HOME/bin:$PATH"
-fi
-
-# IBM CPLEX 64bit
-CPLEX="/opt/ibm/ILOG/CPLEX_Studio_Community1262/cplex/bin/x86-64_linux"
-
-if [ -d $CPLEX ] ; then
-	PATH="$CPLEX:$PATH"
-fi
-
-# Arduino IDE
-ARDUINO="$HOME/bin/arduino-nightly"
-
-if [ -d $ARDUINO ] ; then 
-	PATH="$ARDUINO:$PATH"
-fi
-
-# Personal scripts
-BASH_SCRIPTS="$HOME/Developer/Bash"
-
-if [ -d $BASH_SCRIPTS ] ; then
-	PATH="$PATH:$BASH_SCRIPTS"
-fi
-
-# Visual paradigm
-VISUALPARADIGM="$HOME/bin/VisualParadigm"
-
-if [ -d $VISUALPARADIGM ] ; then
-	PATH="$VISUALPARADIGM:$PATH"
-fi
-
 
