@@ -5,27 +5,35 @@ else
 	. ~/.bash_functions
 fi
 
+# ls shortcuts
+LS_OPTIONS="-1FGhp"
+
 UNAME=`uname`
 if [ "$UNAME" = "Darwin" ] ; then
 	# OS X
-	alias ls="ls -1G"
+	LS_OPTIONS="$LS_OPTIONS -G"
 else
 	# Linux
-	alias ls="ls -1 --color=auto"
+	LS_OPTIONS="$LS_OPTIONS --color=auto"
 fi
 unset UNAME
+alias ls="ls $LS_OPTIONS"
+alias ll="ls $LS_OPTIONS -l"
+alias la="ls $LS_OPTIONS -A"
+alias lla="ls $LS_OPTIONS -lA"
+
+unset LS_OPTIONS
 
 # As seen on http://natelandau.com/my-mac-osx-bash_profile/
 alias cp="cp -iv"
 alias mv="mv -iv"
 alias mkdir="mkdir -pv"
-alias ll="ls -FGhlp"
-alias lla="ls -AFGhlp"
 
+# Some commands shortcut for pdfs and images
 set_cmd_var openpdf evince
 set_cmd_var openimg ristretto
 
-# Shortcuts
+# Folder shortcuts
 MODELICA="$HOME/Developer/Modelica/progetto-OS2"
 set_dir_var MODELICA
 
