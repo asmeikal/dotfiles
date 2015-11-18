@@ -126,7 +126,9 @@ bindsym XF86MonBrightnessUp exec xbacklight -inc 5 # increase screen brightness
 bindsym XF86MonBrightnessDown exec xbacklight -dec 5 # decrease screen brightness
 
 # Lock the screen
-bindsym $mod+Pause exec --no-startup-id i3lock -c 000000
+bindsym $mod+Pause exec --no-startup-id xautolock -locknow
+bindsym $mod+Shift+Pause exec --no-startup-id xautolock -enable
+bindsym $mod+Ctrl+Pause exec --no-startup-id xautolock -disable
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -171,5 +173,5 @@ bar {
 
 exec --no-startup-id nm-applet
 exec --no-startup-id xsetroot -solid "#333332"
-exec --no-startup-id xautolock -time 5 -locker 'i3lock -c 000000' &
+exec --no-startup-id xautolock -time 1 -locker 'i3lock -c 000000' &
 
