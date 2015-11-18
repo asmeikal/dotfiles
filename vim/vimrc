@@ -41,6 +41,7 @@ syntax on
 
 " Use custom color scheme
 colorscheme monokai
+"colorscheme molokai
 " }}}
 
 " Editing {{{
@@ -86,10 +87,10 @@ set wildmenu
 
 " Mappings {{{
 " Handier way to switch to Normal Mode
-inoremap jj <Esc>
+"inoremap jj <Esc>
 
 " Insert a semicolon at the end of the current line
-inoremap <Leader>; <Esc>A;<Esc>
+"inoremap <Leader>; <Esc>A;<Esc>
 
 " Insert a curly bracket at the end of the current line
 "inoremap <Leader>[ <Esc>A {<CR>}<Esc>O<Tab>
@@ -140,3 +141,12 @@ nnoremap <C-L> <C-W>l
 set splitbelow
 set splitright
 " }}}
+
+" File type detection {{{
+" LaTeX class files
+au BufNewFile,BufRead *.cls setlocal filetype=tex
+
+" All bash files
+au BufNewFile,BufRead .bash_*,bash_* setlocal filetype=sh
+" }}}
+
