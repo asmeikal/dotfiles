@@ -1,0 +1,15 @@
+[user]
+	name = Michele Laurenti
+	email = asmeikal@me.com
+[color]
+	ui = true
+	status = auto
+[diff]
+	tool = vimdiff
+	algorithm = patience
+[core]
+	editor = vim
+
+[credential]
+	helper = cache
+
