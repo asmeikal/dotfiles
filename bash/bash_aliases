@@ -6,7 +6,7 @@ else
 fi
 
 # ls shortcuts
-LS_OPTIONS="-1FGhp"
+LS_OPTIONS="-1Fhp"
 
 UNAME=`uname`
 if [ "$UNAME" = "Darwin" ] ; then
@@ -29,6 +29,9 @@ alias cp="cp -iv"
 alias mv="mv -iv"
 alias mkdir="mkdir -pv"
 
+# Qmake 5?
+alias qmake5="QT_SELECT=qt5 qmake"
+
 # Some commands shortcut for pdfs and images
 set_cmd_var openpdf evince
 set_cmd_var openimg ristretto
@@ -50,6 +53,8 @@ if set_dir_var LATEX ; then
 	set_dir_var COMBINATORIA
 	AUTOMI="$LATEX/uni/III-anno/I-semestre/automi"
 	set_dir_var AUTOMI
+	MULTICORE="$LATEX/uni/III-anno/I-semestre/multicore"
+	set_dir_var MULTICORE
 fi
 
 # SoftEng
