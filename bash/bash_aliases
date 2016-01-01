@@ -61,3 +61,8 @@ fi
 SOFTENG="$HOME/Documents/SoftEng"
 set_dir_var SOFTENG
 
+# Assembly stuff
+
+alias das="objdump -D"
+alias hex="hexdump -C"
+
