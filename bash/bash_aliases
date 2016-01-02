@@ -66,3 +66,12 @@ set_dir_var SOFTENG
 alias das="objdump -D"
 alias hex="hexdump -C"
 
+MCLABDIR="$HOME/Developer/C/Utils/mclabutils"
+if set_dir_var MCLABDIR ; then
+	export MCLABDIR
+fi
+MLUTILSDIR="$HOME/Developer/C/Utils/mlutils"
+if set_dir_var MLUTILSDIR ; then
+	export MLUTILSDIR
+fi
+
