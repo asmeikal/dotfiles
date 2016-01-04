@@ -21,3 +21,5 @@ I stole most of this from Jack The Frog aka Washanus The Soupeater.
   :PluginInstall
   ```
 
+I borrowed the syntax file for OpenCL C from [here](https://github.com/vim-scripts/opencl.vim).
+
