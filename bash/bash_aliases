@@ -74,4 +74,7 @@ MLUTILSDIR="$HOME/Developer/C/Utils/mlutils"
 if set_dir_var MLUTILSDIR ; then
 	export MLUTILSDIR
 fi
-
+MLCLUTDIR="$HOME/Developer/openCL/mlclut"
+if set_dir_var MLCLUTDIR ; then
+	export MLCLUTDIR
+fi
