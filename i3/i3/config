@@ -27,8 +27,8 @@ floating_modifier $mod
 # start a terminal
 bindsym $mod+Return exec i3-sensible-terminal
 # start mail reader and web browser
-bindsym $mod+m exec icedove
-bindsym $mod+b exec iceweasel
+bindsym $mod+m exec thunderbird
+bindsym $mod+b exec firefox
 bindsym $mod+c exec pidgin
 bindsym $mod+t exec thunar
 
