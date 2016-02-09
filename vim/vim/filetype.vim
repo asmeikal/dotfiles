@@ -7,6 +7,9 @@ au BufNewFile,BufRead .bash_*,bash_* setlocal filetype=sh
 
 " OpenCL files
 au BufNewFile,BufRead *.cl setlocal filetype=opencl
+
+" Modelica files
+au BufNewFile,BufRead *.mo setlocal filetype=modelica
 " }}}
 
 
