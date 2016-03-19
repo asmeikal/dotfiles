@@ -29,6 +29,10 @@ alias cp="cp -iv"
 alias mv="mv -iv"
 alias mkdir="mkdir -pv"
 
+# find TODOs
+
+alias todos="grep -nr TODO ."
+
 # Qmake 5?
 alias qmake5="QT_SELECT=qt5 qmake"
 
@@ -78,3 +82,10 @@ MLCLUTDIR="$HOME/Developer/openCL/mlclut"
 if set_dir_var MLCLUTDIR ; then
 	export MLCLUTDIR
 fi
+
+TESI="$HOME/Developer/Tesi"
+set_dir_var TESI
+
+SIMENGINE_SETTINGS="$TESI/simengine_settings"
+export SIMENGINE_SETTINGS
+
