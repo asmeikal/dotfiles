@@ -1,0 +1,41 @@
+if [ ! "$DOT_BASH_FUNCTIONS_SOURCED" = "" ] ; then
+	return 1
+fi
+DOT_BASH_FUNCTIONS_SOURCED=1
+#echo "Sourcing '~/.bash_functions'..."
+
+#--------------------------------------------------------------
+#  Small functions, checks if a variable points to a directory,
+#+ otherwise it deletes it.
+#--------------------------------------------------------------
+set_dir_var() {
+	if [ ! -d ${(P)1} ] ; then
+		unset $1
+		return 1
+	else
+		return 0
+	fi
+}
+
+set_cmd_var() {
+	if type $2 1>/dev/null 2>&1 ; then
+		alias $1="$2"
+		return 0
+	else
+		return 1
+	fi
+}
+
+set_path_var() {
+	if [ -d ${(P)1} ] ; then
+		PATH="${(P)1}:$PATH"
+		unset $1
+		return 0
+	else
+		unset $1
+		return 1
+	fi
+}
+
+#echo "Sourced '~/.bash_functions'."
+

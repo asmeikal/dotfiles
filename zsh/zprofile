@@ -1,0 +1,65 @@
+# load bash functions
+if [ ! -e ~/.bash_functions ] ; then
+	echo "~/.bash_functions missing."
+else
+	. ~/.bash_functions
+fi
+
+# set PATH so it includes user's private bin if it exists
+if [ -d "$HOME/bin" ] ; then
+    PATH="$HOME/bin:$PATH"
+fi
+
+# IBM CPLEX 64bit
+CPLEX="/opt/ibm/ILOG/CPLEX_Studio_Community1263/cplex/bin/x86-64_linux"
+set_path_var CPLEX
+
+# ampl
+AMPL="$HOME/bin/amplide.linux64"
+set_path_var AMPL
+
+# Arduino IDE
+ARDUINO="$HOME/bin/arduino-nightly"
+set_path_var ARDUINO
+
+# MiniZinc
+MINIZINC="$HOME/bin/MiniZincIDE-2.0.12-bundle-linux-x86_64"
+set_path_var MINIZINC
+
+# Personal scripts
+BASH_SCRIPTS="$HOME/Developer/Bash"
+set_path_var BASH_SCRIPTS
+
+# Visual paradigm
+VISUALPARADIGM="$HOME/bin/VisualParadigm"
+set_path_var VISUALPARADIGM
+
+# JModelica
+JMODELICA="$HOME/Developer/JModelica/JModelica.org/bin"
+set_path_var JMODELICA
+
+SPHINX="$HOME/.local/bin"
+set_path_var SPHINX
+
+PYTHONPATH="$HOME/Developer/Tesi/simengine"
+export PYTHONPATH
+
+# JModelica python environment variables
+
+JMODELICA_HOME=/home/michele/Developer/JModelica/JModelica.org \
+IPOPT_HOME=/home/michele/Developer/JModelica/Ipopt \
+CPPAD_HOME=/home/michele/Developer/JModelica/JModelica.org/ThirdParty/CppAD/ \
+SUNDIALS_HOME=/home/michele/Developer/JModelica/JModelica.org/ThirdParty/Sundials \
+PYTHONPATH=:/home/michele/Developer/JModelica/JModelica.org/Python/::$PYTHONPATH \
+LD_LIBRARY_PATH=:/home/michele/Developer/JModelica/Ipopt/lib/:/home/michele/Developer/JModelica/JModelica.org/ThirdParty/Sundials/lib:/home/michele/Developer/JModelica/JModelica.org/ThirdParty/CasADi/lib:$LD_LIBRARY_PATH \
+SEPARATE_PROCESS_JVM=/usr/lib/jvm/jdk1.8.0_71/ \
+
+export JMODELICA_HOME
+export IPOPT_HOME
+export CPPAD_HOME
+export SUNDIALS_HOME
+export PYTHONPATH
+export LD_LIBRARY_PATH
+export SEPARATE_PROCESS_JVM
+
+
