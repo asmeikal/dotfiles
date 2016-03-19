@@ -12,7 +12,7 @@ au BufNewFile,BufRead *.cl setlocal filetype=opencl
 au BufNewFile,BufRead *.mo setlocal filetype=modelica
 
 " AMPL files
-au BufNewFile,BufRead *.mod setlocal filetype=ampl
+au BufNewFile,BufRead *.mod,*.run,*.dat setlocal filetype=ampl
 " }}}
 
 
