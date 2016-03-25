@@ -62,4 +62,8 @@ export PYTHONPATH
 export LD_LIBRARY_PATH
 export SEPARATE_PROCESS_JVM
 
+MODELICAPATH="/home/michele/Developer/JModelica/JModelica.org/ThirdParty/MSL/"
+MODELICAPATH="$MODELICAPATH:/home/michele/Developer/Tesi/paeon-modelica/"
+
+export MODELICAPATH
 
