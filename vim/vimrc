@@ -17,6 +17,8 @@ Plugin 'sickill/vim-monokai'
 Bundle 'ntpeters/vim-better-whitespace'
 " let g:better_whitespace_filetypes_blacklist=['tex']
 
+Plugin 'mileszs/ack.vim'
+
 " }}}
 
 " Required for Vundle
