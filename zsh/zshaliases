@@ -62,7 +62,7 @@ if set_dir_var LATEX ; then
 fi
 
 # SoftEng
-SOFTENG="$HOME/Documents/SoftEng"
+SOFTENG="$HOME/Documents/softeng-homebanking-2015"
 set_dir_var SOFTENG
 
 # Assembly stuff
