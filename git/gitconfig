@@ -13,3 +13,6 @@
 [credential]
 	helper = !pass-git-helper $@
 
+[push]
+	default = simple
+
