@@ -10,39 +10,57 @@ if [ -d "$HOME/bin" ] ; then
     PATH="$HOME/bin:$PATH"
 fi
 
-# IBM CPLEX 64bit
-CPLEX="/opt/ibm/ILOG/CPLEX_Studio_Community1263/cplex/bin/x86-64_linux"
-set_path_var CPLEX
+# Personal scripts
+BASH_SCRIPTS="$HOME/Developer/Bash"
+set_path_var BASH_SCRIPTS
 
-# ampl
-AMPL="$HOME/bin/amplide.linux64"
-set_path_var AMPL
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+# Linux Executables
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+
+# Some commands shortcut for pdfs and images
+set_cmd_var openpdf evince
+set_cmd_var openimg ristretto
 
 # Arduino IDE
 ARDUINO="$HOME/bin/arduino-nightly"
 set_path_var ARDUINO
 
-# MiniZinc
+# IBM CPLEX 64bit
+CPLEX="/opt/ibm/ILOG/CPLEX_Studio_Community1263/cplex/bin/x86-64_linux"
+set_path_var CPLEX
+
+# ampl, for Operations Research
+AMPL="$HOME/bin/amplide.linux64"
+set_path_var AMPL
+
+# MiniZinc, for AI
 MINIZINC="$HOME/bin/MiniZincIDE-2.0.12-bundle-linux-x86_64"
 set_path_var MINIZINC
 
-# Personal scripts
-BASH_SCRIPTS="$HOME/Developer/Bash"
-set_path_var BASH_SCRIPTS
-
-# Visual paradigm
-VISUALPARADIGM="$HOME/bin/VisualParadigm"
-set_path_var VISUALPARADIGM
-
-# JModelica
+# JModelica, for System Val & Ver
 JMODELICA="$HOME/Developer/JModelica/JModelica.org/bin"
 set_path_var JMODELICA
 
+# I really don't remember what this is
 SPHINX="$HOME/.local/bin"
 set_path_var SPHINX
 
+# Qmake 5?
+alias qmake5="QT_SELECT=qt5 qmake"
+
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+# Stuff for the fucking thesis
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+
+TESI="$HOME/Developer/Tesi"
+set_dir_var TESI
+
 PYTHONPATH="$HOME/Developer/Tesi/simengine"
 export PYTHONPATH
+
+SIMENGINE_SETTINGS="$TESI/simengine_settings"
+export SIMENGINE_SETTINGS
 
 # JModelica python environment variables
 
@@ -62,8 +80,60 @@ export PYTHONPATH
 export LD_LIBRARY_PATH
 export SEPARATE_PROCESS_JVM
 
+# Modelica PATH
+
 MODELICAPATH="/home/michele/Developer/JModelica/JModelica.org/ThirdParty/MSL/"
 MODELICAPATH="$MODELICAPATH:/home/michele/Developer/Tesi/paeon-modelica/"
 
 export MODELICAPATH
+
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+# C libs
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+
+MCLABDIR="$HOME/Developer/C/Utils/mclabutils"
+if set_dir_var MCLABDIR ; then
+	export MCLABDIR
+fi
+MLUTILSDIR="$HOME/Developer/C/Utils/mlutils"
+if set_dir_var MLUTILSDIR ; then
+	export MLUTILSDIR
+fi
+MLCLUTDIR="$HOME/Developer/openCL/mlclut"
+if set_dir_var MLCLUTDIR ; then
+	export MLCLUTDIR
+fi
+
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+# LaTeX stuff
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+
+# LaTeX
+LATEX="$HOME/Developer/LaTeX"
+if set_dir_var LATEX ; then
+	ALGEBRA="$LATEX/uni/II-anno/I-semestre/algebra"
+	set_dir_var ALGEBRA
+	INTEGRALE="$LATEX/uni/I-anno/II-semestre/calcolo-integrale"
+	set_dir_var INTEGRALE
+	ANALISI="$LATEX/uni/III-anno/I-semestre/analisi-2"
+	set_dir_var ANALISI
+	COMBINATORIA="$LATEX/uni/III-anno/I-semestre/combinatoria"
+	set_dir_var COMBINATORIA
+	AUTOMI="$LATEX/uni/III-anno/I-semestre/automi"
+	set_dir_var AUTOMI
+	MULTICORE="$LATEX/uni/III-anno/I-semestre/multicore"
+	set_dir_var MULTICORE
+fi
+
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+# Software Engineering project
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+
+# SoftEng
+SOFTENG="$HOME/Documents/SoftEng"
+set_dir_var SOFTENG
+
+# Visual paradigm
+VISUALPARADIGM="$HOME/bin/VisualParadigm"
+set_path_var VISUALPARADIGM
 
