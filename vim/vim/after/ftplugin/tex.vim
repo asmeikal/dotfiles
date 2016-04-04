@@ -1,5 +1,5 @@
 setlocal wrap linebreak nolist
-setlocal breakindent
+"setlocal breakindent
 
 "colorscheme molokai
 "let g:molokai_original = 1
