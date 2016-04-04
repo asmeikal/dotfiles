@@ -1,8 +1,8 @@
 # load bash functions
-if [ ! -e ~/.bash_functions ] ; then
-	echo "~/.bash_functions missing."
+if [ ! -e ~/.zshfunctions ] ; then
+	echo "~/.zshfunctions missing."
 else
-	. ~/.bash_functions
+	. ~/.zshfunctions
 fi
 
 # set PATH so it includes user's private bin if it exists
