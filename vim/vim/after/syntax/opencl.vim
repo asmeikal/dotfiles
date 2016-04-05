@@ -118,8 +118,8 @@ syn match clFunction            "vstorea_half\(2\|3\|4\|8\|16\)("
 syn match clFunction            "vstorea_half\(2\|3\|4\|8\|16\)_\(rte\|rtz\|rtp\|rtn\)("
 
 " image read and write functions
-syn match clFunction            "read_image\(f\|i\|ui\|h\)("
-syn match clFunction            "write_image\(f\|i\|ui\|h\)("
+syn match clFunction            "read_image\(f\|i\|ui\|h\)"
+syn match clFunction            "write_image\(f\|i\|ui\|h\)"
 syn keyword clFunction          get_image_width get_image_height get_image_depth get_image_channel_data_type get_image_channel_order get_image_dim
 
 " explicit memory fence functions

@@ -30,62 +30,10 @@ alias mv="mv -iv"
 alias mkdir="mkdir -pv"
 
 # find TODOs
-
 alias todos="grep -nr TODO ."
-
-# Qmake 5?
-alias qmake5="QT_SELECT=qt5 qmake"
-
-# Some commands shortcut for pdfs and images
-set_cmd_var openpdf evince
-set_cmd_var openimg ristretto
-
-# Folder shortcuts
-MODELICA="$HOME/Developer/Modelica/progetto-OS2"
-set_dir_var MODELICA
-
-# LaTeX
-LATEX="$HOME/Developer/LaTeX"
-if set_dir_var LATEX ; then
-	ALGEBRA="$LATEX/uni/II-anno/I-semestre/algebra"
-	set_dir_var ALGEBRA
-	INTEGRALE="$LATEX/uni/I-anno/II-semestre/calcolo-integrale"
-	set_dir_var INTEGRALE
-	ANALISI="$LATEX/uni/III-anno/I-semestre/analisi-2"
-	set_dir_var ANALISI
-	COMBINATORIA="$LATEX/uni/III-anno/I-semestre/combinatoria"
-	set_dir_var COMBINATORIA
-	AUTOMI="$LATEX/uni/III-anno/I-semestre/automi"
-	set_dir_var AUTOMI
-	MULTICORE="$LATEX/uni/III-anno/I-semestre/multicore"
-	set_dir_var MULTICORE
-fi
-
-# SoftEng
-SOFTENG="$HOME/Documents/softeng-homebanking-2015"
-set_dir_var SOFTENG
 
 # Assembly stuff
 
 alias das="objdump -D"
 alias hex="hexdump -C"
-
-MCLABDIR="$HOME/Developer/C/Utils/mclabutils"
-if set_dir_var MCLABDIR ; then
-	export MCLABDIR
-fi
-MLUTILSDIR="$HOME/Developer/C/Utils/mlutils"
-if set_dir_var MLUTILSDIR ; then
-	export MLUTILSDIR
-fi
-MLCLUTDIR="$HOME/Developer/openCL/mlclut"
-if set_dir_var MLCLUTDIR ; then
-	export MLCLUTDIR
-fi
-
-TESI="$HOME/Developer/Tesi"
-set_dir_var TESI
-
-SIMENGINE_SETTINGS="$TESI/simengine_settings"
-export SIMENGINE_SETTINGS
 

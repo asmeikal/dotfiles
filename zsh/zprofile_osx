@@ -1,0 +1,41 @@
+# load bash functions
+if [ ! -e ~/.zshfunctions ] ; then
+	echo "~/.zshfunctions missing."
+else
+	. ~/.zshfunctions
+fi
+
+# set PATH so it includes user's private bin if it exists
+if [ -d "$HOME/bin" ] ; then
+    PATH="$HOME/bin:$PATH"
+fi
+
+# Personal scripts
+BASH_SCRIPTS="$HOME/Developer/Bash"
+set_path_var BASH_SCRIPTS
+
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+# C libs
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+
+MCLABDIR="$HOME/Developer/C/Utils/mclabutils"
+if set_dir_var MCLABDIR ; then
+	export MCLABDIR
+fi
+MLUTILSDIR="$HOME/Developer/C/Utils/mlutils"
+if set_dir_var MLUTILSDIR ; then
+	export MLUTILSDIR
+fi
+MLCLUTDIR="$HOME/Developer/openCL/mlclut"
+if set_dir_var MLCLUTDIR ; then
+	export MLCLUTDIR
+fi
+
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+# Software Engineering project
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+
+# SoftEng
+SOFTENG="$HOME/Developer/softeng-homebanking-2015"
+set_dir_var SOFTENG
+
