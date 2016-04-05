@@ -13,6 +13,10 @@ au BufNewFile,BufRead *.mo setlocal filetype=modelica
 
 " AMPL files
 au BufNewFile,BufRead *.mod,*.run,*.dat setlocal filetype=ampl
+
+" MiniZinc files
+au BufNewFile,BufRead *.mzn,*.dzn setlocal filetype=minizinc
+
 " }}}
 
 
