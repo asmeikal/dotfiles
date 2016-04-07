@@ -91,18 +91,14 @@ export MODELICAPATH
 # C libs
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 
-MCLABDIR="$HOME/Developer/C/Utils/mclabutils"
-if set_dir_var MCLABDIR ; then
-	export MCLABDIR
-fi
-MLUTILSDIR="$HOME/Developer/C/Utils/mlutils"
-if set_dir_var MLUTILSDIR ; then
-	export MLUTILSDIR
-fi
-MLCLUTDIR="$HOME/Developer/openCL/mlclut"
-if set_dir_var MLCLUTDIR ; then
-	export MLCLUTDIR
-fi
+#MCLABDIR="$HOME/Developer/C/Utils/mclabutils"
+#if set_dir_var MCLABDIR ; then
+#	export MCLABDIR
+#fi
+#MLUTILSDIR="$HOME/Developer/C/Utils/mlutils"
+#if set_dir_var MLUTILSDIR ; then
+#	export MLUTILSDIR
+#fi
 
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # LaTeX stuff
@@ -130,10 +126,10 @@ fi
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 
 # SoftEng
-SOFTENG="$HOME/Documents/SoftEng"
+SOFTENG="$HOME/Documents/softeng-homebanking-2015"
 set_dir_var SOFTENG
 
 # Visual paradigm
-VISUALPARADIGM="$HOME/bin/VisualParadigm"
+VISUALPARADIGM="$HOME/bin/Visual_Paradigm_12.2"
 set_path_var VISUALPARADIGM
 
