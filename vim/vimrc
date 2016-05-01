@@ -19,6 +19,8 @@ Bundle 'ntpeters/vim-better-whitespace'
 
 Plugin 'mileszs/ack.vim'
 
+Plugin 'evidens/vim-twig'
+
 " }}}
 
 " Required for Vundle
