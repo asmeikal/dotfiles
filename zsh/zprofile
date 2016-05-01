@@ -91,14 +91,14 @@ export MODELICAPATH
 # C libs
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 
-#MCLABDIR="$HOME/Developer/C/Utils/mclabutils"
-#if set_dir_var MCLABDIR ; then
-#	export MCLABDIR
-#fi
-#MLUTILSDIR="$HOME/Developer/C/Utils/mlutils"
-#if set_dir_var MLUTILSDIR ; then
-#	export MLUTILSDIR
-#fi
+MCLABDIR="$HOME/Developer/C/Utils/mclabutils"
+if set_dir_var MCLABDIR ; then
+	export MCLABDIR
+fi
+MLUTILSDIR="$HOME/Developer/C/Utils/c-utils"
+if set_dir_var MLUTILSDIR ; then
+	export MLUTILSDIR
+fi
 
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # LaTeX stuff
