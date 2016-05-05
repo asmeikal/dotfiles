@@ -18,7 +18,9 @@
 
 [alias]
 	st = status
-	br = branch -v
+	ci = commit
+	br = branch -vv --list
+	bra = branch -vv --list --all
 	dc = diff --cached
 	ls = log --graph --decorate --oneline --all
 	cl = clean -xi
