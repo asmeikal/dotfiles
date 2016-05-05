@@ -16,3 +16,11 @@
 [push]
 	default = simple
 
+[alias]
+	st = status
+	br = branch -v
+	dc = diff --cached
+	ls = log --graph --decorate --oneline --all
+	cl = clean -xi
+	last = log -1 HEAD
+
