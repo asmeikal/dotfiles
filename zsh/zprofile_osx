@@ -43,3 +43,10 @@ fi
 SOFTENG="$HOME/Developer/softeng-homebanking-2015"
 set_dir_var SOFTENG
 
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+# Thesis
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+
+TESI="$HOME/Developer/thesis"
+set_dir_var TESI
+
