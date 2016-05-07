@@ -5,7 +5,12 @@
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="agnoster"
+if [[ `tty` =~ ^/dev/tty[0-7]$ ]]
+then
+	ZSH_THEME="agnoster-tty"
+else
+	ZSH_THEME="agnoster"
+fi
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
