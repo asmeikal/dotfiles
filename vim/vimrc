@@ -21,6 +21,10 @@ Plugin 'mileszs/ack.vim'
 
 Plugin 'evidens/vim-twig'
 
+Plugin 'godlygeek/tabular'
+
+Plugin 'vuryleo/vim-Batsh'
+
 " }}}
 
 " Required for Vundle

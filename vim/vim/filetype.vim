@@ -2,6 +2,9 @@
 " LaTeX class files
 au BufNewFile,BufRead *.cls setlocal filetype=tex
 
+" C headers
+au BufNewFile,BufRead *.h setlocal filetype=c
+
 " All bash and zsh files
 au BufNewFile,BufRead .bash_*,bash_* setlocal filetype=sh
 au BufNewFile,BufRead *zprofile* setlocal filetype=zsh
