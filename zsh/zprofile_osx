@@ -10,26 +10,30 @@ if [ -d "$HOME/bin" ] ; then
     PATH="$HOME/bin:$PATH"
 fi
 
+if [ -d "/usr/local/bin" ] ; then
+	PATH="/usr/local/bin:$PATH"
+fi
+
 # Personal scripts
-BASH_SCRIPTS="$HOME/Developer/Bash"
+BASH_SCRIPTS="$HOME/Developer/bash-scripts"
 set_path_var BASH_SCRIPTS
 
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # C libs
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 
-MCLABDIR="$HOME/Developer/C/Utils/mclabutils"
+MCLABDIR="$HOME/Developer/c/utils/mclabutils"
 if set_dir_var MCLABDIR ; then
 	export MCLABDIR
 fi
-MLUTILSDIR="$HOME/Developer/C/Utils/mlutils"
+MLUTILSDIR="$HOME/Developer/c/utils/c-utils"
 if set_dir_var MLUTILSDIR ; then
 	export MLUTILSDIR
 fi
-MLCLUTDIR="$HOME/Developer/openCL/mlclut"
-if set_dir_var MLCLUTDIR ; then
-	export MLCLUTDIR
-fi
+#MLCLUTDIR="$HOME/Developer/openCL/mlclut"
+#if set_dir_var MLCLUTDIR ; then
+#	export MLCLUTDIR
+#fi
 
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # Software Engineering project
@@ -38,4 +42,11 @@ fi
 # SoftEng
 SOFTENG="$HOME/Developer/softeng-homebanking-2015"
 set_dir_var SOFTENG
+
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+# Thesis
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+
+TESI="$HOME/Developer/thesis"
+set_dir_var TESI
 
