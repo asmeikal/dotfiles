@@ -35,7 +35,7 @@ if [ ! -e ${powerlinedir} ] ; then
 	cd ${currdir}
 fi
 
-vundledir=${currdir}/vim/vim/bundle/Vundle.vim"
+vundledir="${currdir}/vim/vim/bundle/Vundle.vim"
 
 if [ ! -e ${vundledir} ] ; then
 	git clone https://github.com/VundleVim/Vundle.vim.git ${vundledir}
