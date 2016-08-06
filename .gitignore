@@ -1,6 +1,8 @@
 vim/vim/bundle
 vim/vim/.netrwhist
 
+fonts
+
 # Sublime Text 3 settings
 sublime-text-3/**/*
 !sublime-text-3/Snippets/
