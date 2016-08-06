@@ -83,7 +83,7 @@ if set_dir_var MLCLUTDIR ; then
 	export MLCLUTDIR
 fi
 
-TESI="$HOME/Developer/Tesi"
+TESI="$HOME/Developer/thesis"
 set_dir_var TESI
 
 SIMENGINE_SETTINGS="$TESI/simengine_settings"

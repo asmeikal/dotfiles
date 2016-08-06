@@ -53,14 +53,17 @@ alias qmake5="QT_SELECT=qt5 qmake"
 # Stuff for the fucking thesis
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 
-TESI="$HOME/Developer/Tesi"
+TESI="$HOME/Developer/thesis"
 set_dir_var TESI
 
-PYTHONPATH="$HOME/Developer/Tesi/simengine"
+PYTHONPATH="$TESI/simengine"
 export PYTHONPATH
 
 SIMENGINE_SETTINGS="$TESI/simengine_settings"
 export SIMENGINE_SETTINGS
+
+TEXMFHOME="$HOME/texmf"
+export TEXMFHOME
 
 # JModelica python environment variables
 
@@ -83,7 +86,7 @@ export SEPARATE_PROCESS_JVM
 # Modelica PATH
 
 MODELICAPATH="/home/michele/Developer/JModelica/JModelica.org/ThirdParty/MSL/"
-MODELICAPATH="$MODELICAPATH:/home/michele/Developer/Tesi/paeon-modelica/"
+MODELICAPATH="$MODELICAPATH:/home/michele/Developer/thesis/paeon-modelica/"
 
 export MODELICAPATH
 
@@ -91,11 +94,11 @@ export MODELICAPATH
 # C libs
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 
-MCLABDIR="$HOME/Developer/C/Utils/mclabutils"
+MCLABDIR="$HOME/Developer/c/utils/mclabutils"
 if set_dir_var MCLABDIR ; then
 	export MCLABDIR
 fi
-MLUTILSDIR="$HOME/Developer/C/Utils/c-utils"
+MLUTILSDIR="$HOME/Developer/c/utils/c-utils"
 if set_dir_var MLUTILSDIR ; then
 	export MLUTILSDIR
 fi
