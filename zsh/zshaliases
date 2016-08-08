@@ -37,3 +37,7 @@ alias todos="grep -nr TODO ."
 alias das="objdump -D"
 alias hex="hexdump -C"
 
+# don't wrap lines with less
+
+alias less="less -S"
+
