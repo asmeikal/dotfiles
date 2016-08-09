@@ -41,3 +41,7 @@ alias hex="hexdump -C"
 
 alias less="less -S"
 
+# latexmk alias
+
+alias mkpdf="latexmk -e \"$pdflatex=q/pdflatex -synctex=1 -interaction=nonstopmode/\" -pdf"
+
