@@ -1,6 +1,6 @@
 #/bin/sh
 
-install_dirs="vim bash zsh"
+install_dirs="vim bash zsh git"
 currdir=`pwd`
 
 ./install-dir.sh $install_dirs
