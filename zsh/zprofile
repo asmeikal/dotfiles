@@ -14,40 +14,7 @@ fi
 BASH_SCRIPTS="$HOME/Developer/bash-scripts"
 set_path_var BASH_SCRIPTS
 
-# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
-# Linux Executables
-# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+HOSTNAME=`hostname`
 
-
-
-# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
-# Stuff for the fucking thesis
-# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
-
-# JModelica, for System Val & Ver
-JMODELICA="$HOME/Developer/jmodelica/bin"
-set_path_var JMODELICA
-
-# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
-# C libs
-# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
-
-
-
-# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
-# LaTeX stuff
-# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
-
-LATEX="/usr/local/texlive/2016/bin/x86_64-linux"
-set_path_var LATEX
-
-INFOPATH="${INFOPATH}:/usr/local/texlive/2016/texmf-dist/doc/info"
-MANPATH="${MANPATH}:/usr/local/texlive/2016/texmf-dist/doc/man"
-
-# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
-# Software Engineering project
-# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
-
-VISUAL_PARADIGM="$HOME/bin/Visual_Paradigm_12.2"
-set_path_var VISUAL_PARADIGM
+. ~/.zprofile-${HOSTNAME}
 
