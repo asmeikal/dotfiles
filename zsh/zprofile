@@ -51,3 +51,18 @@ MANPATH="${MANPATH}:/usr/local/texlive/2016/texmf-dist/doc/man"
 VISUAL_PARADIGM="$HOME/bin/Visual_Paradigm_12.2"
 set_path_var VISUAL_PARADIGM
 
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+# Software Engineering project
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+
+NODE_JS="$HOME/bin/node/bin"
+set_path_var NODE_JS
+
+MINIZINC="$HOME/bin/minizinc"
+set_path_var MINIZINC
+
+GOPATH="/usr/local/go/bin"
+set_path_var GOPATH
+
+export GOPATH="$HOME/Developer/go"
+
