@@ -9,6 +9,7 @@
 	algorithm = patience
 [core]
 	editor = vim
+	autocrlf = input
 
 [credential]
 	helper = !pass-git-helper $@

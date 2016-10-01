@@ -18,3 +18,18 @@ HOSTNAME=`hostname`
 
 . ~/.zprofile-${HOSTNAME}
 
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+# Software Engineering project
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+
+NODE_JS="$HOME/bin/node/bin"
+set_path_var NODE_JS
+
+MINIZINC="$HOME/bin/minizinc"
+set_path_var MINIZINC
+
+GOPATH="/usr/local/go/bin"
+set_path_var GOPATH
+
+export GOPATH="$HOME/Developer/go"
+
