@@ -1,0 +1,33 @@
+#
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+# Linux Executables
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+
+
+
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+# Stuff for the fucking thesis
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+
+
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+# C libs
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+
+
+
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+# LaTeX stuff
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+
+LATEX="/usr/local/texlive/2016/bin/x86_64-linux"
+set_path_var LATEX
+
+INFOPATH="${INFOPATH}:/usr/local/texlive/2016/texmf-dist/doc/info"
+MANPATH="${MANPATH}:/usr/local/texlive/2016/texmf-dist/doc/man"
+
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+# Software Engineering project
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+
+
