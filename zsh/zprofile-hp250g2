@@ -1,20 +1,16 @@
-#
+
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # Linux Executables
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 
+# Node.js
 
+NODE_JS="$HOME/bin/node/bin"
+set_path_var NODE_JS
 
-# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
-# Stuff for the fucking thesis
-# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+# Autojump
 
-
-# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
-# C libs
-# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
-
-
+. /usr/share/autojump/autojump.sh
 
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # LaTeX stuff
@@ -25,9 +21,4 @@ set_path_var LATEX
 
 INFOPATH="${INFOPATH}:/usr/local/texlive/2016/texmf-dist/doc/info"
 MANPATH="${MANPATH}:/usr/local/texlive/2016/texmf-dist/doc/man"
-
-# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
-# Software Engineering project
-# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
-
 
