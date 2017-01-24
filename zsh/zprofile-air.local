@@ -1,6 +1,8 @@
 
 # docker compose
-
 fpath=(~/.zsh/completion $fpath)
 autoload -Uz compinit && compinit -i
+
+# autojump
+. /usr/share/autojump/autojump.sh
 

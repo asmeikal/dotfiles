@@ -26,6 +26,7 @@ export GOPATH="$HOME/Developer/go"
 # autojump
 . /usr/share/autojump/autojump.sh
 
+# docker compose
 fpath=(~/.zsh/completion $fpath)
 autoload -Uz compinit && compinit -i
 
