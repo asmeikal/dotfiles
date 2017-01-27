@@ -6,3 +6,7 @@ autoload -Uz compinit && compinit -i
 # autojump
 . /usr/local/share/autojump/autojump.zsh
 
+# mactex
+MACTEX="/Library/TeX/Distributions/.DefaultTex/Contents/Programs/texbin"
+set_path_var MACTEX
+
