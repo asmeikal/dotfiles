@@ -1,3 +1,22 @@
 .DS_Store
 node_modules/
 
+# vim
+*.swp
+
+# LaTeX dirt
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.loe
+*.log
+*.out
+*.toc
+
+# other dirt
+*.backup
+*.bak
+*.gz
+
