@@ -17,13 +17,9 @@ Plugin 'sickill/vim-monokai'
 Bundle 'ntpeters/vim-better-whitespace'
 " let g:better_whitespace_filetypes_blacklist=['tex']
 
-Plugin 'mileszs/ack.vim'
-
 Plugin 'evidens/vim-twig'
 
-Plugin 'godlygeek/tabular'
-
-Plugin 'vuryleo/vim-Batsh'
+Plugin 'JuliaEditorSupport/julia-vim'
 
 " }}}
 
