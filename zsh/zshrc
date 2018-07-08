@@ -6,6 +6,8 @@
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
 ZSH_THEME="agnoster"
+# If using pure theme, ZSH_THEME must be unset.
+#ZSH_THEME=""
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -88,6 +90,9 @@ export DEFAULT_USER="michele"
 bindkey '\e[A' history-beginning-search-backward
 bindkey '\e[B' history-beginning-search-forward
 
+#autoload -U promptinit; promptinit
+#prompt pure
+
 if [ -e ~/.zshaliases ] ; then
 	source ~/.zshaliases
 fi
@@ -95,4 +100,6 @@ fi
 if [ -e ~/.zprofile ] ; then
 	source ~/.zprofile
 fi
+
+source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 

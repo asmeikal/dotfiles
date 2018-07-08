@@ -18,6 +18,7 @@ else
 fi
 unset UNAME
 alias ls="ls $LS_OPTIONS"
+alias l="ls $LS_OPTIONS"
 alias ll="ls $LS_OPTIONS -l"
 alias la="ls $LS_OPTIONS -A"
 alias lla="ls $LS_OPTIONS -lA"

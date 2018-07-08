@@ -1,9 +1,14 @@
 .DS_Store
 node_modules/
 env/
+.sass-cache/
 
 # vim
 *.swp
+
+# JetBrains
+.idea/
+cmake-build-debug/
 
 # LaTeX dirt
 *.aux

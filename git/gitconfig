@@ -1,30 +1,48 @@
 [user]
-	name = Michele Laurenti
-	email = asmeikal@me.com
+    name = Michele Laurenti
+    email = asmeikal@me.com
 [color]
-	ui = true
-	status = auto
+    ui = true
+    status = auto
 [diff]
-	tool = vimdiff
-	algorithm = patience
+    tool = vimdiff
+    algorithm = patience
+    submodule = log
 [core]
-	editor = vim
-	autocrlf = input
-	excludesfile = ~/.gitignore_global
+    editor = vim
+    autocrlf = input
+    excludesfile = /Users/michele/.gitignore_global
 
 [credential]
-	helper = !pass-git-helper $@
+    helper = !pass-git-helper $@
 
 [push]
-	default = simple
+    default = simple
 
 [alias]
-	st = status
-	ci = commit
-	br = branch -vv --list
-	bra = branch -vv --list --all
-	dc = diff --cached
-	ls = log --graph --decorate --oneline --all
-	cl = clean -xi
-	last = log -1 HEAD
+    st = status
+    ci = commit
+    br = branch -vv --list
+    bra = branch -vv --list --all
+    dc = diff --cached
+    ls = log --graph --decorate --oneline --all
+    cl = clean -xi
+    last = log -1 HEAD
+    whoami = config user.email
+    uni = config --local user.email laurenti.1603064@studenti.uniroma1.it
+    work = config --local user.email laurenti.280@gmail.com
+    chainside = config --local user.email michele.laurenti@chainside.net
 
+[commit]
+    template = /Users/michele/.stCommitMsg
+[filter "lfs"]
+    clean = git-lfs clean -- %f
+    smudge = git-lfs smudge -- %f
+    process = git-lfs filter-process
+    required = true
+[difftool "sourcetree"]
+    cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+    path =
+[mergetool "sourcetree"]
+    cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+    trustExitCode = true

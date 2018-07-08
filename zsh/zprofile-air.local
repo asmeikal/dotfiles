@@ -6,7 +6,15 @@ autoload -Uz compinit && compinit -i
 # autojump
 . /usr/local/share/autojump/autojump.zsh
 
-# mactex
+## mactex
 MACTEX="/Library/TeX/Distributions/.DefaultTex/Contents/Programs/texbin"
 set_path_var MACTEX
+
+# cvc4
+CVC4="/opt/local/bin"
+set_path_var CVC4
+
+# CPATH
+CPATH="/usr/local/opt/libxml2/include/libxml2/:/usr/local/Cellar/libzip/1.2.0/lib/libzip/include/:${CPATH}"
+export CPATH
 

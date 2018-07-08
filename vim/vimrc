@@ -14,12 +14,23 @@ Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'sickill/vim-monokai'
 
+Plugin 'rking/ag.vim'
+
 Bundle 'ntpeters/vim-better-whitespace'
 " let g:better_whitespace_filetypes_blacklist=['tex']
 
 Plugin 'evidens/vim-twig'
 
 Plugin 'JuliaEditorSupport/julia-vim'
+
+Plugin 'editorconfig/editorconfig-vim'
+
+Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-git'
+
+Plugin 'leafgarland/typescript-vim'
+
+Plugin 'pangloss/vim-javascript'
 
 " }}}
 
@@ -36,7 +47,7 @@ set nocompatible
 let g:tex_flavor = "tex"
 
 " Enable auto-indenting and filetype-specific plugins
-filetype indent plugin on
+"filetype indent plugin on
 " }}}
 
 " Colours {{{
@@ -121,6 +132,8 @@ set smartcase
 " When no filetype-specific is enabled, opening a line keeps the same indent level
 set autoindent
 
+set expandtab
+
 " How many columns Vim uses for displaying a <Tab>
 set tabstop=4
 
@@ -131,7 +144,12 @@ set softtabstop=4
 set shiftwidth=4
 
 " Tabs are not converted to spaces
-set noexpandtab
+"set noexpandtab
+" }}}
+
+" Modelines {{{
+set modeline
+set modelines=5
 " }}}
 
 " Splits {{{
