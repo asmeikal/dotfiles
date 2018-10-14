@@ -148,12 +148,12 @@ export PYTHONPATH
 
 # JModelica python environment variables
 
-JMODELICA_HOME=/home/michele/Developer/JModelica/JModelica.org \
-IPOPT_HOME=/home/michele/Developer/JModelica/Ipopt \
-CPPAD_HOME=/home/michele/Developer/JModelica/JModelica.org/ThirdParty/CppAD/ \
-SUNDIALS_HOME=/home/michele/Developer/JModelica/JModelica.org/ThirdParty/Sundials \
-PYTHONPATH=:/home/michele/Developer/JModelica/JModelica.org/Python/::$PYTHONPATH \
-LD_LIBRARY_PATH=:/home/michele/Developer/JModelica/Ipopt/lib/:/home/michele/Developer/JModelica/JModelica.org/ThirdParty/Sundials/lib:/home/michele/Developer/JModelica/JModelica.org/ThirdParty/CasADi/lib:$LD_LIBRARY_PATH \
+JMODELICA_HOME=/home/asmeikal/Developer/JModelica/JModelica.org \
+IPOPT_HOME=/home/asmeikal/Developer/JModelica/Ipopt \
+CPPAD_HOME=/home/asmeikal/Developer/JModelica/JModelica.org/ThirdParty/CppAD/ \
+SUNDIALS_HOME=/home/asmeikal/Developer/JModelica/JModelica.org/ThirdParty/Sundials \
+PYTHONPATH=:/home/asmeikal/Developer/JModelica/JModelica.org/Python/::$PYTHONPATH \
+LD_LIBRARY_PATH=:/home/asmeikal/Developer/JModelica/Ipopt/lib/:/home/asmeikal/Developer/JModelica/JModelica.org/ThirdParty/Sundials/lib:/home/asmeikal/Developer/JModelica/JModelica.org/ThirdParty/CasADi/lib:$LD_LIBRARY_PATH \
 SEPARATE_PROCESS_JVM=/usr/lib/jvm/jdk1.8.0_71/ \
 
 export JMODELICA_HOME

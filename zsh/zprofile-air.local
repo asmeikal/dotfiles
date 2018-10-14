@@ -18,3 +18,6 @@ set_path_var CVC4
 CPATH="/usr/local/opt/libxml2/include/libxml2/:/usr/local/Cellar/libzip/1.2.0/lib/libzip/include/:${CPATH}"
 export CPATH
 
+# Add pyenv python versions
+PATH="${HOME}/.pyenv/versions/3.5.3/bin:${PATH}"
+

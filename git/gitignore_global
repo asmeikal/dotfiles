@@ -1,7 +1,9 @@
 .DS_Store
 node_modules/
 env/
+.env
 .sass-cache/
+.python-version
 
 # vim
 *.swp
