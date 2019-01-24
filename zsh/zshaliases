@@ -48,3 +48,9 @@ alias mkpdf="latexmk -e \"$pdflatex=q/pdflatex -synctex=1 -interaction=nonstopmo
 
 alias last-commit="git --no-pager log -1 --oneline --no-decorate --no-color | awk '{printf \"%s\",\$1}' | pbcopy"
 
+alias git-cleanup-local='git branch --merged | egrep -v "(^\*|master|dev|version)" | xargs git branch -d'
+
+alias git-cleanup-remote='git remote prune origin'
+
+alias ts='tmux switch-client -t'
+

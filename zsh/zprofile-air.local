@@ -4,20 +4,28 @@ fpath=(~/.zsh/completion $fpath)
 autoload -Uz compinit && compinit -i
 
 # autojump
-. /usr/local/share/autojump/autojump.zsh
+[ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
 
-## mactex
-MACTEX="/Library/TeX/Distributions/.DefaultTex/Contents/Programs/texbin"
-set_path_var MACTEX
+# zsh syntax highlighting
+source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
-# cvc4
-CVC4="/opt/local/bin"
-set_path_var CVC4
+# NVM
+export NVM_SYMLINK_CURRENT=true
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-# CPATH
-CPATH="/usr/local/opt/libxml2/include/libxml2/:/usr/local/Cellar/libzip/1.2.0/lib/libzip/include/:${CPATH}"
-export CPATH
+# pyenv
+eval "$(pyenv init -)"
 
-# Add pyenv python versions
-PATH="${HOME}/.pyenv/versions/3.5.3/bin:${PATH}"
+# GNU gettext
+export PATH="/usr/local/opt/gettext/bin:$PATH"
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 

@@ -164,3 +164,7 @@ set splitbelow
 set splitright
 " }}}
 
+" fzf
+set rtp+=/usr/local/opt/fzf
+" }}}
+

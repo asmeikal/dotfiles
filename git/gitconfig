@@ -1,5 +1,5 @@
 [user]
-    name = Michele Laurenti
+    name = Michelle Laurenti
     email = asmeikal@me.com
 [color]
     ui = true
@@ -12,6 +12,7 @@
     editor = vim
     autocrlf = input
     excludesfile = ~/.gitignore_global
+    hookPath = ~/.githooks
 
 [credential]
     helper = !pass-git-helper $@
@@ -31,4 +32,4 @@
     whoami = config user.email
     uni = config --local user.email laurenti.1603064@studenti.uniroma1.it
     work = config --local user.email laurenti.280@gmail.com
-    chainside = config --local user.email michele.laurenti@chainside.net
+    chainside = config --local user.email michelle.laurenti@chainside.net
