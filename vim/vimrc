@@ -1,62 +1,29 @@
-" Vundle {{{
-" Required for Vundle
-set nocompatible
-filetype off
-
-" Set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-
-" Let Vundle manage Vundle
-Plugin 'VundleVim/Vundle.vim'
-
-" Plugins {{{
-
-Plugin 'sickill/vim-monokai'
-
-Plugin 'rking/ag.vim'
-
-Bundle 'ntpeters/vim-better-whitespace'
-" let g:better_whitespace_filetypes_blacklist=['tex']
-
-Plugin 'evidens/vim-twig'
-
-Plugin 'JuliaEditorSupport/julia-vim'
-
-Plugin 'editorconfig/editorconfig-vim'
-
-Plugin 'tpope/vim-fugitive'
-Plugin 'tpope/vim-git'
-
-Plugin 'leafgarland/typescript-vim'
-
-Plugin 'pangloss/vim-javascript'
-
-" }}}
-
-" Required for Vundle
-call vundle#end()
-filetype plugin indent on
-" }}}
-
 " Basics {{{
-" Turn off compatibility to vi
+if (!isdirectory(expand('$HOME/.vim/repos/github.com/Shougo/dein.vim')))
+  call system(expand('mkdir -p $HOME/.vim/repos/github.com'))
+  call system(expand('git clone https://github.com/Shougo/dein.vim $HOME/.vim/repos/github.com/Shougo/dein.vim'))
+endif
+
+
 set nocompatible
 
-" My tex flavor is LaTeX :-)
-let g:tex_flavor = "tex"
+  set runtimepath+=~/.vim/repos/github.com/Shougo/dein.vim/
+call dein#begin(expand('~/.vim'))
+call dein#add('Shougo/dein.vim')
+call dein#add('haya14busa/dein-command.vim')
+call dein#add('sickill/vim-monokai')
+if dein#check_install()
+  call dein#install()
+endif
+call dein#end()
 
-" Enable auto-indenting and filetype-specific plugins
-"filetype indent plugin on
 " }}}
 
 " Colours {{{
 " Enable syntax highlighting
 syntax on
 
-" Use custom color scheme
 colorscheme monokai
-"colorscheme molokai
 " }}}
 
 " Editing {{{
@@ -65,7 +32,23 @@ set hidden
 
 " Backspace works like you expect it
 set backspace=indent,eol,start
+" }}}
 
+" Spaces & Tabs {{{
+" When no filetype-specific is enabled, opening a line keeps the same indent level
+set autoindent
+
+" Tabs are converted to spaces
+set expandtab
+
+" How many columns Vim uses for displaying a <Tab>
+set tabstop=2
+
+" How many columns Vim uses when <Tab> is pressed in Insert Mode
+set softtabstop=2
+
+" How many columns text is indented with reindent operations
+set shiftwidth=2
 " }}}
 
 " Layout {{{
@@ -101,15 +84,6 @@ set wildmenu
 " }}}
 
 " Mappings {{{
-" Handier way to switch to Normal Mode
-"inoremap jj <Esc>
-
-" Insert a semicolon at the end of the current line
-"inoremap <Leader>; <Esc>A;<Esc>
-
-" Insert a curly bracket at the end of the current line
-"inoremap <Leader>[ <Esc>A {<CR>}<Esc>O<Tab>
-
 " Turn off search highlighting until the next search
 nnoremap <Leader>l :nohls<CR>
 " }}}
@@ -128,28 +102,12 @@ set ignorecase
 set smartcase
 " }}}
 
-" Spaces & Tabs {{{
-" When no filetype-specific is enabled, opening a line keeps the same indent level
-set autoindent
+" Powerline {{{
+" Config python
+let g:powerline_pycmd="py3"
 
-set expandtab
-
-" How many columns Vim uses for displaying a <Tab>
-set tabstop=4
-
-" How many columns Vim uses when <Tab> is pressed in Insert Mode
-set softtabstop=4
-
-" How many columns text is indented with reindent operations
-set shiftwidth=4
-
-" Tabs are not converted to spaces
-"set noexpandtab
-" }}}
-
-" Modelines {{{
-set modeline
-set modelines=5
+" Always display status bar
+set laststatus=2
 " }}}
 
 " Splits {{{
@@ -162,9 +120,5 @@ nnoremap <C-L> <C-W>l
 " More natural split opening
 set splitbelow
 set splitright
-" }}}
-
-" fzf
-set rtp+=/usr/local/opt/fzf
 " }}}
 

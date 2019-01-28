@@ -51,17 +51,17 @@ COMPLETION_WAITING_DOTS="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
-#plugins=(vi-mode)
-
-# User configuration
-
-
-export PATH="/home/asmeikal/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
-# export MANPATH="/usr/local/man:$MANPATH"
+plugins=(
+	autojump
+	git
+	tmux
+)
 
 source $ZSH/oh-my-zsh.sh
 
+# User configuration
+
+# export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
@@ -102,11 +102,5 @@ fi
 
 if [ -e ~/.zprofile ] ; then
 	source ~/.zprofile
-fi
-
-if [ -e /usr/local/share/zsh-syntax-highlighing ] ; then
-    source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-elif [ -e /usr/share/zsh-syntax-highlighting ] ; then
-    source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 fi
 

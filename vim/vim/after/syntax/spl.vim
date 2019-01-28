@@ -1,1 +1,0 @@
-/Users/michele/Developer/grasshopper/grasshopper/vim/syntax/spl.vim
