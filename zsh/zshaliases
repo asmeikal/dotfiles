@@ -39,7 +39,13 @@ alias less="less -S"
 
 alias mkpdf="latexmk -e \"$pdflatex=q/pdflatex -synctex=1 -interaction=nonstopmode/\" -pdf"
 
-alias last-commit="git --no-pager log -1 --oneline --no-decorate --no-color | awk '{printf \"%s\",\$1}' | pbcopy"
+if [ "$UNAME" = "Darwin" ] ; then
+	# OS X
+  alias last-commit="git --no-pager log -1 --oneline --no-decorate --no-color | awk '{printf \"%s\",\$1}' | pbcopy"
+else
+	# Linux
+  alias last-commit="git --no-pager log -1 --oneline --no-decorate --no-color | awk '{printf \"%s\",\$1}' | xclip"
+fi
 
 alias git-cleanup-local='git branch --merged | egrep -v "(^\*|master|dev|version)" | xargs git branch -d'
 

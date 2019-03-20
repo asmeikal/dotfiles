@@ -1,0 +1,8 @@
+[Unit]
+Description=Conky
+
+[Service]
+ExecStart=conky --daemonize --pause=5 -c ~/.config/conky/config
+
+[Install]
+WantedBy=default.target

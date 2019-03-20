@@ -12,6 +12,9 @@ call dein#begin(expand('~/.vim'))
 call dein#add('Shougo/dein.vim')
 call dein#add('haya14busa/dein-command.vim')
 call dein#add('sickill/vim-monokai')
+call dein#add('airblade/vim-gitgutter')
+call dein#add('martinda/Jenkinsfile-vim-syntax')
+call dein#add('leafgarland/typescript-vim')
 if dein#check_install()
   call dein#install()
 endif
@@ -49,6 +52,8 @@ set softtabstop=2
 
 " How many columns text is indented with reindent operations
 set shiftwidth=2
+
+set smartindent
 " }}}
 
 " Layout {{{

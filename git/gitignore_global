@@ -1,6 +1,7 @@
 .DS_Store
 node_modules/
 env/
+venv/
 .env
 .sass-cache/
 .python-version
@@ -30,4 +31,5 @@ cmake-build-debug/
 *.backup
 *.bak
 *.gz
+dump.rdb
 

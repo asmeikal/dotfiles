@@ -76,10 +76,10 @@ bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
 # split in horizontal orientation
-#bindsym $mod+" split h
+bindsym $mod+g split h
 
 # split in vertical orientation
-#bindsym $mod+' split v
+bindsym $mod+v split v
 
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
@@ -184,7 +184,7 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 bar {
         position top
-        status_command i3status
+        status_command i3blocks
 }
 
 #######################################################################
@@ -196,11 +196,12 @@ bar {
 #
 # Please remove the following exec line:
 #######################################################################
-exec i3-config-wizard
+#exec i3-config-wizard
+exec compton -c ~/.config/compton/compton.conf
 
 # Locking, shutdown, reboot
 
-set $Locker i3lock-fancy && sleep 1
+set $Locker i3lock-fancy -g && sleep 1
 
 set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown
 mode "$mode_system" {
@@ -217,3 +218,13 @@ mode "$mode_system" {
 }
 
 bindsym $mod+End mode "$mode_system"
+
+# Pulse Audio controls
+bindsym XF86AudioRaiseVolume exec --no-startup-id amixer sset Master 5%+ #increase sound volume
+bindsym XF86AudioLowerVolume exec --no-startup-id amixer sset Master 5%- #decrease sound volume
+bindsym XF86AudioMute exec --no-startup-id amixer sset Master toggle # mute sound
+
+# Key indicators
+
+bindsym --release Caps_Lock exec pkill -SIGRTMIN+11 i3blocks
+
