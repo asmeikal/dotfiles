@@ -2,7 +2,7 @@
 Description=Conky
 
 [Service]
-ExecStart=conky --daemonize --pause=5 -c ~/.config/conky/config
+ExecStart=conky --pause=60
 
 [Install]
 WantedBy=default.target
