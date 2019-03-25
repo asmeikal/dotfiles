@@ -1,8 +1,20 @@
 # font
-font pango:Fira Code for Powerline 11
+font pango:Fira Code for Powerline Regular 14
 
 # remove window titles
 for_window [class=".*"] border pixel 0
+for_window [class="(?i)termite"] title_format "Terminal"
+
+# assign programs to workspaces
+assign [class="(?i)webstorm"] 2
+assign [class="(?i)firefox"] 3
+assign [class="(?i)slack"] 4
+assign [class="(?i)thunderbird"] 5
+
+# autostart programs
+exec firefox-developer-edition
+exec thunderbird
+exec slack
 
 # set gaps
 gaps inner 15

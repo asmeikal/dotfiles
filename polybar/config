@@ -73,8 +73,8 @@ padding-left = 1
 
 bottom = true
 
-modules-left = cpu memory eth temperature keyboard
-modules-right = powermenu
+modules-left = cpu temperature memory
+modules-right = keyboard eth powermenu
 
 [module/i3]
 type = internal/i3
@@ -113,7 +113,7 @@ label-urgent-padding = 1
 
 [module/cpu]
 type = internal/cpu
-interval = 2
+interval = 0.5
 format = <ramp-coreload>
 format-prefix = "CPU "
 format-prefix-foreground = ${colors.foreground}
@@ -131,7 +131,7 @@ ramp-coreload-7 = █
 
 [module/memory]
 type = internal/memory
-interval = 2
+interval = 0.5
 format = <bar-used>
 format-prefix = "RAM "
 format-prefix-foreground = ${colors.foreground}
