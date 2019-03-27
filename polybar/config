@@ -74,7 +74,7 @@ padding-left = 1
 bottom = true
 
 modules-left = cpu temperature memory
-modules-right = keyboard eth powermenu
+modules-right = keyboard eth
 
 [module/i3]
 type = internal/i3

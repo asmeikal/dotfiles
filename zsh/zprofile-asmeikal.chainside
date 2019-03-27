@@ -19,3 +19,5 @@ export NVM_DIR="$HOME/.nvm"
 # yarn
 export PATH="$PATH:`yarn global bin`"
 
+# poetry
+export PATH="$HOME/.poetry/bin:$PATH"
