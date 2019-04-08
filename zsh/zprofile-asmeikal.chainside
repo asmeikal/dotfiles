@@ -21,3 +21,6 @@ export PATH="$PATH:`yarn global bin`"
 
 # poetry
 export PATH="$HOME/.poetry/bin:$PATH"
+
+# custom scripts
+export PATH="$HOME/Developer/dotfiles/zsh/scripts:$PATH"

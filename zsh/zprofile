@@ -1,5 +1,0 @@
-
-HOSTNAME=`hostname`
-
-. ~/.zprofile-${HOSTNAME}
-

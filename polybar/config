@@ -48,7 +48,7 @@ module-margin-left = 1
 module-margin-right = 2
 
 font-0 = Fira Mono for Powerline:pixelsize=12;style=Regular;1
-font-1 = siji:pixelsize=10;1
+font-1 = FontAwesome:pixelsize=11;style=Regular;1
 
 tray-position = right
 tray-padding = 2
@@ -60,6 +60,8 @@ cursor-scroll = ns-resize
 inherit = bar/base
 
 bottom = false
+
+padding-left = 1
 
 modules-left = i3
 modules-right = date
@@ -74,11 +76,11 @@ padding-left = 1
 bottom = true
 
 modules-left = cpu temperature memory
-modules-right = keyboard eth
+modules-right = keyboard alsa eth
 
 [module/i3]
 type = internal/i3
-format = <label-state> <label-mode>
+format =   <label-state> <label-mode>
 index-sort = true
 wrapping-scroll = false
 
@@ -115,7 +117,7 @@ label-urgent-padding = 1
 type = internal/cpu
 interval = 0.5
 format = <ramp-coreload>
-format-prefix = "CPU "
+format-prefix = " "
 format-prefix-foreground = ${colors.foreground}
 label = %percentage-cores:16%
 
@@ -133,7 +135,7 @@ ramp-coreload-7 = █
 type = internal/memory
 interval = 0.5
 format = <bar-used>
-format-prefix = "RAM "
+format-prefix = " "
 format-prefix-foreground = ${colors.foreground}
 label = %gb_used%/%gb_total%
 
@@ -155,7 +157,7 @@ interval = 3.0
 format-connected = <label-connected>
 format-disconnected = <label-disconnected>
 
-label-connected = %ifname%: %local_ip% (%downspeed% %upspeed%)
+label-connected = %ifname%: %local_ip% ( %downspeed%  %upspeed%)
 
 label-disconnected = %ifname%: not connected
 ;format-disconnected = <label-disconnected>
@@ -167,7 +169,7 @@ label-disconnected = %ifname%: not connected
 type = internal/date
 interval = 1
 
-format = 🕓 <label>
+format = <label>
 
 date = "%a %b %d, %Y "
 date-alt = "%d-%m-%Y "
@@ -175,7 +177,7 @@ date-alt = "%d-%m-%Y "
 time = %H:%M
 time-alt = %H:%M:%S
 
-label = %date% %time%
+label =  %date%  %time%
 
 [module/temperature]
 type = internal/temperature
@@ -189,10 +191,9 @@ label = %temperature-c%
 label-warn = %temperature-c%
 label-warn-foreground = ${colors.alert}
 
-ramp-0 = A
-ramp-1 = B
-ramp-2 = C
-ramp-foreground = ${colors.foreground-alt}
+ramp-0 = 
+ramp-1 = 
+ramp-2 = 
 
 [module/powermenu]
 type = custom/menu
@@ -221,6 +222,66 @@ type = internal/xkeyboard
 format = <label-indicator>
 
 label-indicator = %name%
+
+[module/alsa]
+type = internal/alsa
+
+; Soundcard to be used
+; Usually in the format hw:# where # is the card number
+; You can find the different card numbers in `/proc/asound/cards`
+master-soundcard = hw:0
+speaker-soundcard = hw:1
+headphone-soundcard = hw:0
+
+; Name of the master, speaker and headphone mixers
+; Use the following command to list available mixer controls:
+; $ amixer scontrols | sed -nr "s/.*'([[:alnum:]]+)'.*/\1/p"
+; If master, speaker or headphone-soundcard isn't the default,
+; use `amixer -c # scontrols` instead where # is the number
+; of the master, speaker or headphone soundcard respectively
+;
+; Default: Master
+master-mixer = Master
+
+; Use volume mapping (similar to amixer -M and alsamixer), where the increase in volume is linear to the ear
+; Default: false
+mapped = true
+
+; Interval for volume increase/decrease (in percent points)
+; Default: 5
+interval = 5
+
+; Available tags:
+;   <label-volume> (default)
+;   <ramp-volume>
+;   <bar-volume>
+format-volume = <ramp-volume> <label-volume>
+
+; Available tags:
+;   <label-muted> (default)
+;   <ramp-volume>
+;   <bar-volume>
+;format-muted = <label-muted>
+
+; Available tokens:
+;   %percentage% (default)
+;label-volume = %percentage%%
+
+; Available tokens:
+;   %percentage% (default)
+label-muted =  muted
+
+; Only applies if <ramp-volume> is used
+ramp-volume-0 = 
+ramp-volume-1 = 
+ramp-volume-2 = 
+
+; If defined, it will replace <ramp-volume> when
+; headphones are plugged in to `headphone_control_numid`
+; If undefined, <ramp-volume> will be used for both
+; Only applies if <ramp-volume> is used
+ramp-headphones-0 = 
+ramp-headphones-1 = 
 
 [settings]
 screenchange-reload = true

@@ -35,10 +35,7 @@ alias hex="hexdump -C"
 
 alias less="less -S"
 
-# latexmk alias
-
-alias mkpdf="latexmk -e \"$pdflatex=q/pdflatex -synctex=1 -interaction=nonstopmode/\" -pdf"
-
+# git last commit
 if [ "$UNAME" = "Darwin" ] ; then
 	# OS X
   alias last-commit="git --no-pager log -1 --oneline --no-decorate --no-color | awk '{printf \"%s\",\$1}' | pbcopy"
@@ -47,9 +44,10 @@ else
   alias last-commit="git --no-pager log -1 --oneline --no-decorate --no-color | awk '{printf \"%s\",\$1}' | xclip"
 fi
 
+# git branch cleanup
 alias git-cleanup-local='git branch --merged | egrep -v "(^\*|master|dev|version)" | xargs git branch -d'
-
 alias git-cleanup-remote='git remote prune origin'
 
+# tmux session switching
 alias ts='tmux switch-client -t'
 
