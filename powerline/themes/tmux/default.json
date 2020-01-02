@@ -16,6 +16,13 @@
 					"istime": true
 				}
 			},
+      {
+        "function": "powerline.segments.common.bat.battery",
+        "name": "battery",
+        "args": {
+          "online": "\u26a1"
+        }
+      },
 			{
 				"function": "powerline.segments.common.net.hostname"
 			}

@@ -3,8 +3,9 @@
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # POWERLINE
+export POWERLINE_ROOT="/usr/lib/python3.7/site-packages/powerline"
 powerline-daemon -q
-. /usr/lib/python3.7/site-packages/powerline/bindings/zsh/powerline.zsh
+. "${POWERLINE_ROOT}/bindings/zsh/powerline.zsh"
 
 # PYENV
 export PATH="/home/asmeikal/.pyenv/bin:$PATH"

@@ -1,0 +1,11 @@
+# User bin
+export PATH="${PATH}:${HOME}/bin"
+
+# Powerline
+export POWERLINE_ROOT="/usr/lib/python3.8/site-packages/powerline"
+powerline-daemon -q
+. "${POWERLINE_ROOT}/bindings/zsh/powerline.zsh"
+
+# Syntax highlighting
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
