@@ -38,10 +38,10 @@ alias less="less -S"
 # git last commit
 if [ "$UNAME" = "Darwin" ] ; then
 	# OS X
-  alias last-commit="git --no-pager log -1 --oneline --no-decorate --no-color | awk '{printf \"%s\",\$1}' | pbcopy"
+  alias last-commit="git --no-pager log -1 --oneline --no-decorate --no-color | awk '{printf \"%s\",\$1}'"
 else
 	# Linux
-  alias last-commit="git --no-pager log -1 --oneline --no-decorate --no-color | awk '{printf \"%s\",\$1}' | xclip"
+  alias last-commit="git --no-pager log -1 --oneline --no-decorate --no-color | awk '{printf \"%s\",\$1}'"
 fi
 
 # git branch cleanup

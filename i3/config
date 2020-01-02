@@ -9,12 +9,12 @@ for_window [class="(?i)termite"] title_format "Terminal"
 assign [class="(?i)webstorm"] number 2
 assign [class="(?i)firefox"] number 3
 assign [class="(?i)slack"] number 4
-assign [class="(?i)thunderbird"] number 5
+assign [class="(?i)mailspring"] number 5
 
 # autostart programs
 exec firefox-developer-edition
-exec thunderbird
 exec slack
+exec mailspring
 
 # set gaps
 gaps inner 15
@@ -80,6 +80,7 @@ bindsym $mod+Shift+minus move scratchpad
 # If there are multiple scratchpad windows, this command cycles through them.
 bindsym $mod+minus scratchpad show
 
+bindsym $mod+equal sticky toggle
 
 # workspace icons
 exec_always --no-startup-id exec i3-workspace-names-daemon
@@ -141,7 +142,7 @@ bindsym $mod+r mode "resize"
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
 # start compton
-exec compton -c ~/.config/compton/compton.conf
+exec compton -d
 
 # set locker
 set $Locker i3lock-fancy && sleep 1
