@@ -16,6 +16,7 @@ call dein#add('airblade/vim-gitgutter')
 call dein#add('martinda/Jenkinsfile-vim-syntax')
 call dein#add('leafgarland/typescript-vim')
 call dein#add('peitalin/vim-jsx-typescript')
+call dein#add('Quramy/tsuquyomi')
 if dein#check_install()
   call dein#install()
 endif

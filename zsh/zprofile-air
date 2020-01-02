@@ -1,31 +1,25 @@
+# language
+export LC_ALL=en_US.UTF-8  
+export LANG=en_US.UTF-8
 
-# docker compose
-fpath=(~/.zsh/completion $fpath)
-autoload -Uz compinit && compinit -i
-
-# autojump
-[ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
-
-# zsh syntax highlighting
+# ZSH SYNTAX HIGHLIGHTING
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
-# NVM
-export NVM_SYMLINK_CURRENT=true
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # pyenv
 eval "$(pyenv init -)"
 
-# GNU gettext
-export PATH="/usr/local/opt/gettext/bin:$PATH"
+# autojump
+[ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
 
+# nvm
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+#go
+export GOPATH="$HOME/Developer/go"
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+#powerline
+export PATH="$HOME/.local/bin:$PATH"
+source "$HOME/.local/lib/python3.5/site-packages/powerline/bindings/zsh/powerline.zsh"
 
