@@ -15,6 +15,7 @@ call dein#add('sickill/vim-monokai')
 call dein#add('airblade/vim-gitgutter')
 call dein#add('martinda/Jenkinsfile-vim-syntax')
 call dein#add('leafgarland/typescript-vim')
+call dein#add('peitalin/vim-jsx-typescript')
 call dein#add('Quramy/tsuquyomi')
 if dein#check_install()
   call dein#install()
@@ -126,5 +127,8 @@ nnoremap <C-L> <C-W>l
 " More natural split opening
 set splitbelow
 set splitright
+" }}}
+
+" FileTypes {{{
 " }}}
 

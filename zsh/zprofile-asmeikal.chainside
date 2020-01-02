@@ -8,9 +8,9 @@ powerline-daemon -q
 . "${POWERLINE_ROOT}/bindings/zsh/powerline.zsh"
 
 # PYENV
-export PATH="/home/asmeikal/.pyenv/bin:$PATH"
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
+#export PATH="/home/asmeikal/.pyenv/bin:$PATH"
+#eval "$(pyenv init -)"
+#eval "$(pyenv virtualenv-init -)"
 
 # NVM
 export NVM_DIR="$HOME/.nvm"
@@ -19,9 +19,47 @@ export NVM_DIR="$HOME/.nvm"
 
 # yarn
 export PATH="$PATH:`yarn global bin`"
+export PATH="$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
 # poetry
 export PATH="$HOME/.poetry/bin:$PATH"
 
 # custom scripts
 export PATH="$HOME/Developer/dotfiles/zsh/scripts:$PATH"
+
+#go
+export GOPATH="$HOME/Developer/go"
+export GOBIN="$GOPATH/bin"
+export PATH="$PATH:$GOBIN"
+
+# ruby gems
+export PATH="$HOME/.gem/ruby/2.6.0/bin:$PATH"
+
+# android studio
+export ANDROID_SDK="$HOME/Android/Sdk"
+export PATH="$ANDROID_SDK/platform-tools:$PATH"
+
+# tmuxinator
+export EDITOR="vim"
+source ~/.bin/tmuxinator.zsh
+
+# React Native
+export ANDROID_HOME=$HOME/Android/Sdk
+export PATH=$PATH:$ANDROID_HOME/emulator
+export PATH=$PATH:$ANDROID_HOME/tools
+export PATH=$PATH:$ANDROID_HOME/tools/bin
+export PATH=$PATH:$ANDROID_HOME/platform-tools
+
+# Expo
+export ANDROID_SDK_ROOT=$ANDROID_HOME
+
+# React Native Debugger
+export PATH=$PATH:$HOME/bin/react-native-debugger
+
+# Custom bins
+export PATH=$PATH:$HOME/bin
+export PATH=$PATH:$HOME/.local/bin
+
+# kubectl autocomplete
+if [ /home/asmeikal/bin/kubectl ]; then source <(kubectl completion zsh); fi
+

@@ -27,6 +27,10 @@
     cl = clean -xi
     last = log -1 HEAD
     whoami = config user.email
-    uni = config --local user.email laurenti.1603064@studenti.uniroma1.it
-    work = config --local user.email laurenti.280@gmail.com
-    chainside = config --local user.email michelle.laurenti@chainside.net
+
+[includeIf "gitdir:~/Developer/chainside/"]
+    path = ~/Developer/chainside/.gitconfig
+
+[includeIf "gitdir:~/Developer/moveax/"]
+    path = ~/Developer/moveax/.gitconfig
+
