@@ -12,7 +12,7 @@ assign [class="(?i)slack"] number 4
 assign [class="(?i)mailspring"] number 5
 
 # autostart programs
-exec firefox-developer-edition
+exec firefox
 exec slack
 exec mailspring
 
@@ -141,8 +141,8 @@ bindsym $mod+r mode "resize"
 
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
-# start compton
-exec compton -d
+exec setxkbmap -layout us
+exec setxkbmap -option compose:ralt
 
 # set locker
 set $Locker i3lock-fancy && sleep 1
@@ -154,5 +154,9 @@ bindsym $mod+End exec --no-startup-id $Locker
 bindsym XF86AudioRaiseVolume exec --no-startup-id amixer sset Master 5%+ #increase sound volume
 bindsym XF86AudioLowerVolume exec --no-startup-id amixer sset Master 5%- #decrease sound volume
 bindsym XF86AudioMute exec --no-startup-id amixer sset Master toggle # mute sound
+bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight -inc 5
+bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -dec 5
 
+# start compton
+exec picom -d
 

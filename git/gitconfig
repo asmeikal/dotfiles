@@ -34,3 +34,6 @@
 [includeIf "gitdir:~/Developer/moveax/"]
     path = ~/Developer/moveax/.gitconfig
 
+[includeIf "gitdir:~/Developer/ittaxi/"]
+    path = ~/Developer/moveax/.gitconfig
+

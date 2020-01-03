@@ -28,7 +28,7 @@ alert = #bd2c40
 
 [bar/base]
 width = 100%
-height = 26
+height = 36
 radius = 0
 fixed-center = true
 
@@ -47,8 +47,8 @@ padding-right = 2
 module-margin-left = 1
 module-margin-right = 2
 
-font-0 = Fira Mono for Powerline:pixelsize=12;style=Regular;1
-font-1 = FontAwesome:pixelsize=11;style=Regular;1
+font-0 = Fira Mono for Powerline:pixelsize=16;style=Regular;1
+font-1 = FontAwesome:pixelsize=14;style=Regular;1
 
 tray-position = right
 tray-padding = 2
@@ -69,14 +69,14 @@ modules-right = date
 [bar/bottom]
 inherit = bar/base
 
-height = 40
+height = 52
 
 padding-left = 1
 
 bottom = true
 
 modules-left = cpu temperature memory filesystem
-modules-right = keyboard alsa eth
+modules-right = keyboard alsa wifi eth battery
 
 [module/i3]
 type = internal/i3
@@ -149,9 +149,31 @@ bar-used-fill = ▐
 bar-used-empty = ▐
 bar-used-empty-foreground = #444444
 
-[module/eth]
+[module/battery]
+type = internal/battery
+
+time-format = %H:%M
+
+format-discharging = <ramp-capacity> <label-discharging>
+
+label-discharging = %percentage%% (%time%)
+
+full-at = 96
+
+ramp-capacity-0 = 
+ramp-capacity-1 = 
+ramp-capacity-2 = 
+ramp-capacity-3 = 
+ramp-capacity-4 = 
+
+battery = BAT0
+adapter = AC
+
+poll-interval = 5
+
+[module/wifi]
 type = internal/network
-interface = ethernet
+interface = wifi
 interval = 3.0
 
 format-connected = <label-connected>
@@ -159,7 +181,23 @@ format-disconnected = <label-disconnected>
 
 label-connected = %ifname%: %local_ip% ( %downspeed%  %upspeed%)
 
-label-disconnected = %ifname%: not connected
+label-disconnected = 
+;format-disconnected = <label-disconnected>
+;format-disconnected-underline = ${self.format-connected-underline}
+;label-disconnected = %ifname% disconnected
+;label-disconnected-foreground = ${colors.foreground-alt}
+
+[module/eth]
+type = internal/network
+interface = eth
+interval = 3.0
+
+format-connected = <label-connected>
+format-disconnected = <label-disconnected>
+
+label-connected = %ifname%: %local_ip% ( %downspeed%  %upspeed%)
+
+label-disconnected = 
 ;format-disconnected = <label-disconnected>
 ;format-disconnected-underline = ${self.format-connected-underline}
 ;label-disconnected = %ifname% disconnected
@@ -269,7 +307,7 @@ format-volume = <ramp-volume> <label-volume>
 
 ; Available tokens:
 ;   %percentage% (default)
-label-muted =  muted
+label-muted = 
 
 ; Only applies if <ramp-volume> is used
 ramp-volume-0 = 
@@ -290,7 +328,7 @@ type = internal/fs
 mount-0 = /
 mount-1 = /home
 
-label-mounted = %mountpoint% %percentage_used%% (%used% of %total%)
+label-mounted = %mountpoint% %percentage_used%%
 
 [settings]
 screenchange-reload = true
