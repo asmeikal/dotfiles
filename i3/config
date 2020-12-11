@@ -9,6 +9,7 @@ for_window [class="(?i)termite"] title_format "Terminal"
 assign [class="(?i)webstorm"] number 2
 assign [class="(?i)firefox"] number 3
 assign [class="(?i)slack"] number 4
+assign [class="(?i)thunderbird"] number 5
 assign [class="(?i)mailspring"] number 5
 
 # autostart programs
@@ -82,9 +83,6 @@ bindsym $mod+minus scratchpad show
 
 bindsym $mod+equal sticky toggle
 
-# workspace icons
-exec_always --no-startup-id exec i3-workspace-names-daemon
-
 # switch to workspace
 bindsym $mod+1 workspace number 1
 bindsym $mod+2 workspace number 2
@@ -154,9 +152,7 @@ bindsym $mod+End exec --no-startup-id $Locker
 bindsym XF86AudioRaiseVolume exec --no-startup-id amixer sset Master 5%+ #increase sound volume
 bindsym XF86AudioLowerVolume exec --no-startup-id amixer sset Master 5%- #decrease sound volume
 bindsym XF86AudioMute exec --no-startup-id amixer sset Master toggle # mute sound
+bindsym XF86AudioMicMute exec --no-startup-id amixer sset Capture toggle
 bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight -inc 5
 bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -dec 5
-
-# start compton
-exec picom -d
 

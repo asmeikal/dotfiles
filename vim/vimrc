@@ -1,27 +1,5 @@
 " Basics {{{
-if (!isdirectory(expand('$HOME/.vim/repos/github.com/Shougo/dein.vim')))
-  call system(expand('mkdir -p $HOME/.vim/repos/github.com'))
-  call system(expand('git clone https://github.com/Shougo/dein.vim $HOME/.vim/repos/github.com/Shougo/dein.vim'))
-endif
-
-
 set nocompatible
-
-  set runtimepath+=~/.vim/repos/github.com/Shougo/dein.vim/
-call dein#begin(expand('~/.vim'))
-call dein#add('Shougo/dein.vim')
-call dein#add('haya14busa/dein-command.vim')
-call dein#add('sickill/vim-monokai')
-call dein#add('airblade/vim-gitgutter')
-call dein#add('martinda/Jenkinsfile-vim-syntax')
-call dein#add('leafgarland/typescript-vim')
-call dein#add('peitalin/vim-jsx-typescript')
-call dein#add('Quramy/tsuquyomi')
-if dein#check_install()
-  call dein#install()
-endif
-call dein#end()
-
 " }}}
 
 " Colours {{{

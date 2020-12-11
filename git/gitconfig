@@ -37,3 +37,7 @@
 [includeIf "gitdir:~/Developer/ittaxi/"]
     path = ~/Developer/moveax/.gitconfig
 
+[pull]
+	ff = only
+[url "git@bitbucket.org:"]
+	insteadOf = https://bitbucket.org/

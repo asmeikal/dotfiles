@@ -6,26 +6,40 @@
 			},
 			{
 				"function": "powerline.segments.common.net.hostname",
-        "priority": 10
+				"priority": 10
 			},
 			{
 				"function": "powerline.segments.common.env.user",
 				"priority": 30,
-        "args": {
-          "hide_user": "asmeikal"
-        }
+				"args": {
+					"hide_user": "asmeikal"
+				}
 			},
 			{
 				"function": "powerline.segments.common.env.virtualenv",
 				"priority": 50
 			},
 			{
+				"function": "powerline_kubernetes.kubernetes",
+				"priority": 30,
+				"args": {
+					"show_kube_logo": true,
+					"show_cluster": true,
+					"show_namespace": false,
+					"show_default_namespace": false,
+					"alerts": [
+						"live",
+						"cluster:live"
+					]
+				}
+			},
+			{
 				"function": "powerline.segments.shell.cwd",
 				"priority": 10,
-        "args": {
-          "dir_limit_depth": 1,
-          "ellipsis": null
-        }
+				"args": {
+					"dir_limit_depth": 1,
+					"ellipsis": null
+				}
 			},
 			{
 				"function": "powerline.segments.shell.jobnum",
@@ -44,9 +58,9 @@
 			{
 				"function": "powerline.segments.common.vcs.branch",
 				"priority": 40,
-        "args": {
-          "status_colors": true
-        }
+				"args": {
+					"status_colors": true
+				}
 			}
 		]
 	}

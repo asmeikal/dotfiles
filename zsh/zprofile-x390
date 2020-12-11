@@ -23,3 +23,41 @@ source "${HOME}/.local/bin/aws_zsh_completer.sh"
 # yarn
 export PATH="${PATH}:$(yarn global bin)"
 
+# android studio
+export ANDROID_HOME="${HOME}/Android/Sdk"
+export ANDROID_SDK_ROOT="${ANDROID_HOME}"
+export PATH="${ANDROID_HOME}:${PATH}"
+export PATH="$PATH:$ANDROID_HOME/emulator"
+export PATH="$PATH:$ANDROID_HOME/tools"
+export PATH="$PATH:$ANDROID_HOME/tools/bin"
+export PATH="$PATH:$ANDROID_HOME/platform-tools"
+
+# Go
+export PATH="${PATH}:${HOME}/go/bin"
+export GOPATH="${HOME}/go"
+
+# pyenv
+export PATH="/home/asmeikal/.pyenv/bin:$PATH"
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
+
+# poetry
+export PATH="$HOME/.poetry/bin:$PATH"
+
+# ruby
+export PATH="$HOME/.gem/ruby/2.7.0/bin:$PATH"
+
+# flutter
+export PATH="$HOME/bin/flutter/bin:$PATH"
+
+source ~/.zsecrets
+
+
+export PATH="$HOME/.cargo/bin:$PATH"
+
+# flipper
+export PATH="$HOME/bin/flipper:$PATH"
+
+# added by travis gem
+[ ! -s /home/asmeikal/.travis/travis.sh ] || source /home/asmeikal/.travis/travis.sh
+
